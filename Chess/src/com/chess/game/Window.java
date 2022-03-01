@@ -13,7 +13,7 @@ public class Window extends JFrame {
 
 	public Window() {
 		super("Chess");
-		this.setSize(WIDTH, HEIGHT+20);
+		this.setSize(WIDTH+15, HEIGHT+35);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.setVisible(true);

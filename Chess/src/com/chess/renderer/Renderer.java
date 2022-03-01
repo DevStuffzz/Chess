@@ -43,10 +43,10 @@ public class Renderer extends JComponent implements ImageObserver {
 
 		if(this.pieces == null) return;
 
-		for(int rank = 0; rank < 8; rank++) {
-			for(int file = 0; file < 8; file++) {
-				if(pieces[rank][file] == null) continue;
-				g.drawImage(pieces[rank][file].image, rank * Window.SQUARE_H, file * Window.SQUARE_H, 100, 100, this);
+		for(Piece[] _pieces : pieces) {
+			for(Piece piece : _pieces) {
+				if(piece == null) continue;
+				g.drawImage(piece.image, piece.column * Window.SQUARE_H, piece.rank * Window.SQUARE_H, 100, 100, this);
 			}
 		}
 	}
